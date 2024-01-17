@@ -15,7 +15,7 @@ public class SolutionHelperTests
     [Fact]
     public void Test1()
     {
-        var solutionHelper = new SolutionHelper(new FileInfo(@"D:\repos\Frank.DependenciesExplorer\Frank.DependenciesExplorer.sln"));
+        var solutionHelper = new SolutionHelper(new FileInfo(@"..\..\..\..\Frank.DependenciesExplorer.sln"));
         var nugetTree = solutionHelper.GetNugetTree();
         _outputHelper.WriteLine(nugetTree.ToString());
 
@@ -25,7 +25,7 @@ public class SolutionHelperTests
     [Fact]
     public void Test2()
     {
-        var solutionHelper = new SolutionHelper(new FileInfo(@"D:\repos\Frank.DependenciesExplorer\Frank.DependenciesExplorer.sln"));
+        var solutionHelper = new SolutionHelper(new FileInfo(@"..\..\..\..\Frank.DependenciesExplorer.sln"));
         var projects = solutionHelper.GetSolution().GetProjects();
 
         foreach (var project in projects)
@@ -38,7 +38,7 @@ public class SolutionHelperTests
     [Fact]
     public void Test3()
     {
-        var solutionHelper = new SolutionHelper(new FileInfo(@"D:\repos\Frank.DependenciesExplorer\Frank.DependenciesExplorer.sln"));
+        var solutionHelper = new SolutionHelper(new FileInfo(@"..\..\..\..\Frank.DependenciesExplorer.sln"));
         var projects = solutionHelper.GetSolution().GetProjects();
 
         foreach (var project in projects)

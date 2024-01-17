@@ -14,7 +14,7 @@ public class ProjectExtensionsTests
     [Fact]
     public void Test1()
     {
-        var solutionHelper = new SolutionHelper(new FileInfo(@"D:\repos\Frank.DependenciesExplorer\Frank.DependenciesExplorer.sln"));
+        var solutionHelper = new SolutionHelper(new FileInfo(@"..\..\..\..\Frank.DependenciesExplorer.sln"));
         var solution = solutionHelper.GetSolution();
         var projects = solution.GetProjects();
 

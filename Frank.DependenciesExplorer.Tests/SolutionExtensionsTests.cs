@@ -15,7 +15,7 @@ public class SolutionExtensionsTests
     [Fact]
     public void Test1()
     {
-        var solutionHelper = new SolutionHelper(new FileInfo(@"D:\repos\Frank.PulseFlow\Frank.PulseFlow.sln"));
+        var solutionHelper = new SolutionHelper(new FileInfo(@"..\..\..\..\Frank.DependenciesExplorer.sln"));
         var solution = solutionHelper.GetSolution();
         var solutionNode = solution.GetSolutionNode();
         _outputHelper.WriteLine(solutionNode.PrintHierarchy());
