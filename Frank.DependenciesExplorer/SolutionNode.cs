@@ -7,15 +7,12 @@ public class SolutionNode(string name, IList<ProjectNode> projects)
     public string Name { get; } = name;
 
     public IList<ProjectNode> Projects { get; } = projects;
-    
+
     public string PrintHierarchy(string indent = "")
     {
-        StringBuilder sb = new StringBuilder();
+        var sb = new StringBuilder();
         sb.AppendLine($"{indent}{Name}");
-        foreach (var child in Projects)
-        {
-            sb.Append(child.PrintHierarchy(indent + "    "));
-        }
+        foreach (var child in Projects) sb.Append(child.PrintHierarchy(indent + "    "));
 
         return sb.ToString();
     }

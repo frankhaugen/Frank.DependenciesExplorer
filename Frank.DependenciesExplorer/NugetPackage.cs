@@ -3,20 +3,17 @@ using NuGet.ProjectModel;
 
 namespace Frank.DependenciesExplorer;
 
-public class PackageNode(LockFileTargetLibrary package, IList<PackageNode> dependencies)
+public class NugetPackage(LockFileTargetLibrary package, IList<NugetPackage> dependencies)
 {
     public LockFileTargetLibrary Package { get; } = package;
 
-    public IList<PackageNode> Dependencies { get; } = dependencies;
+    public IList<NugetPackage> Dependencies { get; } = dependencies;
 
     public string PrintHierarchy(string indent = "")
     {
-        StringBuilder sb = new StringBuilder();
+        var sb = new StringBuilder();
         sb.AppendLine($"{indent}{Package.Name} ({Package.Version?.OriginalVersion})");
-        foreach (var child in this.Dependencies)
-        {
-            sb.Append(child.PrintHierarchy(indent + "    "));
-        }
+        foreach (var child in Dependencies) sb.Append(child.PrintHierarchy(indent + "    "));
 
         return sb.ToString();
     }

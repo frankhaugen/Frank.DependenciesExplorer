@@ -12,12 +12,11 @@ public class SolutionExtensionsTests
         _outputHelper = outputHelper;
     }
     
-    // [Fact]
+    [Fact]
     public void Test1()
     {
-        var solutionHelper = new SolutionHelper(new FileInfo(@"..\..\..\..\Frank.DependenciesExplorer.sln"));
-        var solution = solutionHelper.GetSolution();
-        var solutionNode = solution.GetSolutionNode();
-        _outputHelper.WriteLine(solutionNode.PrintHierarchy());
+        var solutionNode = DependenciesExplorer.GetSolutionNode(SolutionFactory.GetSolution(DependenciesExplorerTestConstants.CreatSolutionFile(_outputHelper.WriteLine)));
+        solutionNode.Projects.First().NugetDependencies.Should().HaveCount(1);
+        _outputHelper.WriteLine(solutionNode.Projects.First().PrintHierarchy());
     }
 }
