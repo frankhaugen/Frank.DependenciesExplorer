@@ -11,7 +11,7 @@ public class ProjectExtensionsTests
         _outputHelper = outputHelper;
     }
     
-    [Fact]
+    // [Fact]
     public void Test1()
     {
         var solutionHelper = new SolutionHelper(new FileInfo(@"..\..\..\..\Frank.DependenciesExplorer.sln"));

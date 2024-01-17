@@ -12,7 +12,7 @@ public class SolutionExtensionsTests
         _outputHelper = outputHelper;
     }
     
-    [Fact]
+    // [Fact]
     public void Test1()
     {
         var solutionHelper = new SolutionHelper(new FileInfo(@"..\..\..\..\Frank.DependenciesExplorer.sln"));

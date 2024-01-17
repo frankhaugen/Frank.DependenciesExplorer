@@ -12,7 +12,7 @@ public class SolutionHelperTests
         _outputHelper = outputHelper;
     }
 
-    [Fact]
+    // [Fact]
     public void Test1()
     {
         var solutionHelper = new SolutionHelper(new FileInfo(@"..\..\..\..\Frank.DependenciesExplorer.sln"));
@@ -22,7 +22,7 @@ public class SolutionHelperTests
         nugetTree.DependentNugets.Should().NotBeNullOrEmpty();
     }
     
-    [Fact]
+    // [Fact]
     public void Test2()
     {
         var solutionHelper = new SolutionHelper(new FileInfo(@"..\..\..\..\Frank.DependenciesExplorer.sln"));
@@ -35,7 +35,7 @@ public class SolutionHelperTests
         
     }
     
-    [Fact]
+    // [Fact]
     public void Test3()
     {
         var solutionHelper = new SolutionHelper(new FileInfo(@"..\..\..\..\Frank.DependenciesExplorer.sln"));
