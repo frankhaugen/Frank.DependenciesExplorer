@@ -1,6 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <Description>Gets the project references from a solution file and gets the nuget package references from the project files.</Description>
+        <PackageTags>nuget, project, references, solution, hierarchy, dependencies, version, package, packages, overview</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
