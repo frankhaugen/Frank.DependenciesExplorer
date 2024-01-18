@@ -10,10 +10,11 @@ public static class CliRunner
         var standardOutputContainer = new StringBuilder();
         var errorOutputContainer = new StringBuilder();
     
-        var result = Cli.Wrap("powershell")
+        var shell = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "powershell" : "pwsh";
+        
+        var result = Cli.Wrap(shell)
             .WithArguments(command)
             .WithValidation(CommandResultValidation.None)
-            // .WithCredentials(new Credentials())
             .WithWorkingDirectory(directory.FullName)
             .WithStandardOutputPipe(PipeTarget.ToDelegate(x => standardOutputContainer.AppendLine(x)))
             .WithStandardErrorPipe(PipeTarget.ToDelegate(x => errorOutputContainer.AppendLine(x)))
