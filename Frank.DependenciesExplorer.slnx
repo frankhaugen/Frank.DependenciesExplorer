@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+    <File Path="CODE_OF_CONDUCT.md" />
+    <File Path="CONTRIBUTING.md" />
+    <File Path="Directory.Build.props" />
+    <File Path="icon.png" />
+    <File Path="nuget.config" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="Frank.DependenciesExplorer.Tests/Frank.DependenciesExplorer.Tests.csproj" />
+  <Project Path="Frank.DependenciesExplorer/Frank.DependenciesExplorer.csproj" />
+</Solution>
